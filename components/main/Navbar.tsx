@@ -38,7 +38,7 @@ const Navbar = () => {
             />
           )}
           <div className="md:flex  items-center justify-between w-full h-auto border border-[#7042f861] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200  hidden">
-            <a href="#about-me" className="cursor-pointer">
+            <a href="#about-me" className="cursor-pointer ">
               About-Me
             </a>
             <a href="#skills" className="cursor-pointer">
@@ -50,15 +50,17 @@ const Navbar = () => {
           </div>
         </div>
         <div className="md:flex flex-row gap-6 hidden">
-          {Socials.map((social) => {
+          {Socials.map((social, index) => {
             return (
-              <Image
-                src={social.src}
-                alt={social.name}
-                key={social.name}
-                width={30}
-                height={30}
-              />
+              <a href={social.link} target="_blank" key={social.name}>
+                <Image
+                  src={social.src}
+                  alt={social.name}
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                />
+              </a>
             );
           })}
         </div>
