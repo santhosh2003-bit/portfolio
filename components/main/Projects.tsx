@@ -1,7 +1,9 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
+import { useRouter } from "next/navigation";
 
 const Projects = () => {
+  const route = useRouter();
   return (
     <div
       className="flex flex-col items-center justify-center py-20"
@@ -31,6 +33,14 @@ const Projects = () => {
           title="Car Rent Application"
           description="Next JS Based Application used for Booking a Car "
         />
+      </div>
+      <div className="text-white text-center w-full ">
+        <button
+          className="border-2 border-white px-3 py-2 rounded-lg"
+          onClick={() => route.push("https://github.com/santhosh2003-bit")}
+        >
+          Explore More
+        </button>
       </div>
     </div>
   );
