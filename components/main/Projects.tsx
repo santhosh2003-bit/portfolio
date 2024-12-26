@@ -34,7 +34,7 @@ const Projects = () => {
           description="Next JS Based Application used for Booking a Car "
         />
       </div>
-      <div className="text-white text-center w-full ">
+      <div className="text-white text-center w-full  mt-9">
         <button
           className="border-2 border-white px-3 py-2 rounded-lg"
           onClick={() => route.push("https://github.com/santhosh2003-bit")}
